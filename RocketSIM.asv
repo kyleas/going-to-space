@@ -47,8 +47,8 @@ while v >= 0
     g = gravity(altitude, GM, Re);
     current_thrust = find_thrust(t, burn_time, thrust); 
     rho = polyval(rho_altitude, altitude); 
-    if (altitude > 80000 || rho < 0)
-        rho = .000015; 
+    if (altitude > 80000 |)
+        rho = 0; 
     end
     drag_force = rocket_drag(v, Cd, A, rho);
     acceleration = (current_thrust - mass * g - drag_force) / mass;
